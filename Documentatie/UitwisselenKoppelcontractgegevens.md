@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Uitwisselen koppel/contractgegevens 2024***
+Functional message: ***Uitwisselen koppel/contractgegevens 2025***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-5 juli 2024
+4 juli 2025
 
 Summary
 
@@ -76,7 +76,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00004 Versienummer 4
+00005 Versienummer 5
 
 **<u>Functie bericht</u>**
 
@@ -331,6 +331,8 @@ van andere werkgevers in de administratie van de arbodienst.
 02 Werkgever onbekend
 
 03 Werkgevergegevens komen niet overeen
+
+04 Koppelcode onbekend
 
 **<u>Identificatie bij verzekeraar</u>**
 
@@ -1051,6 +1053,8 @@ Geeft aan welke dienstverlening wordt afgenomen.
 02 Vervanging contract
 
 03 Dienstverlening komt te vervallen
+
+04 Dienstverlening omgezet naar monocontract
 
 **<u>Data</u>**
 

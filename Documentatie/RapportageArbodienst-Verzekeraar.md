@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2024***
+Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2025***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-3 juli 2024
+4 juli 2025
 
 Summary
 

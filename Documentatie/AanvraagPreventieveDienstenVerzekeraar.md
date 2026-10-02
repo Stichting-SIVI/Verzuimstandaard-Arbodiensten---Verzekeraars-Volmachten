@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basistransactie Verzuim*
 
-Functional message: ***Aanvraag preventieve diensten verzekeraar 2024***
+Functional message: ***Aanvraag preventieve diensten verzekeraar 2025***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-3 juli 2024
+4 juli 2025
 
 Summary
 

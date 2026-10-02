@@ -5,7 +5,7 @@ Business chain: *Verzuim Datamodel*
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimmeldingen Arbodienst -\> Verzekeraar
-2024***
+2025***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-5 juli 2024
+8 juli 2025
 
 Summary
 
@@ -73,7 +73,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00005 Versienummer 5
+00006 Versienummer 6
 
 **<u>Aanmaakdatum</u>**
 
@@ -576,6 +576,18 @@ uitgegeven identificatie wordt niet hergebruikt.
 
 *xml tag:* IdWrknmrVzkr
 
+**<u>No-risk polis</u>**
+
+**Valt werknemer onder no-risk polis J/N F a1**
+
+*xml tag:* WrknmrNoriskJN
+
+*code list:* Logische eenheid (subset selected)
+
+J Ja
+
+N Nee
+
 PARTNER 0..1, F
 
 *werkgever - werknemer - PARTNER*
@@ -923,22 +935,6 @@ Unieke code voor het dienstverband van de werknemer.
 *xml tag:* Enddat
 
 De datum van de laatste dag waarop de gegevens geldig zijn.
-
-**<u>Directeur grootaandeelhouder gegevens</u>**
-
-**DGA JN F a1**
-
-*xml tag:* DGAJN
-
-Aanduiding of het gaat om een directeur grootaandeelhouder.
-
-*code list:* Logische eenheid (all selected)
-
-J Ja
-
-N Nee
-
-O Onbekend
 
 **<u>Einde dienstverband</u>**
 
