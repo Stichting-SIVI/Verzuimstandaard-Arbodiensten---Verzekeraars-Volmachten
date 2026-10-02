@@ -5,7 +5,7 @@ Business chain: *Verzuim Datamodel*
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimrapportage Arbodienst -\> Verzekeraar
-2020***
+2021***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 juli 2020
+25 juni 2021
 
 Summary
 
@@ -239,7 +239,7 @@ binnen de loonadministratie bestaat.
 
 **<u>Identificerende gegevens</u>**
 
-**Burgerservicenummer R n..9**
+**Burgerservicenummer O n..9**
 
 *xml tag:* SofiNr
 
@@ -381,7 +381,7 @@ V Vrouw
 
 **<u>Identificatie</u>**
 
-**Identificatie werknemer O an..40**
+**Identificatie werknemer R an..40**
 
 *xml tag:* IdWrknmr
 
@@ -769,6 +769,8 @@ aanvangsdatum de dag waarop men zou moeten werken na beëindiging van de
 zwangerschaps- en bevallingsuitkering. Tijdens regulier verlof wordt het
 ziekteverzuim ook meegeteld.
 
+Datum mag niet in de toekomst liggen.
+
 Bron:
 
 Berekening van ziekteverzuim
@@ -825,6 +827,8 @@ Het werkhervattingsadvies zoals afgegeven door een Arbo-arts.
 01 Nieuw
 
 03 Vervallen
+
+04 Ter identificatie en/ of ter informatie
 
 05 Correctie
 

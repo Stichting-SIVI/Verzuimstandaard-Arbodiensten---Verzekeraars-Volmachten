@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basistransactie Verzuim*
 
-Functional message: ***Aanvraag preventieve diensten verzekeraar 2020***
+Functional message: ***Aanvraag preventieve diensten verzekeraar 2021***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 juli 2020
+25 juni 2021
 
 Summary
 
@@ -68,7 +68,7 @@ BERICHT ALGEMEEN 1..1, R
 
 *code list:* Versienummer bericht (subset selected)
 
-00001 Versienummer 1
+00002 Versienummer 2
 
 **<u>Aanmaakdatum</u>**
 
@@ -803,49 +803,25 @@ desbetreffende werknemer met zijn dienstverband valt.
 
 *xml tag:* SrtDnstvbndCd
 
-Bron: ArboNed (2006)
+Bron: ArboNed (2021)
 
-*code list:* Soort dienstverband (all selected)
-
-01 Normale arbeidsovereenkomst
-
-02 Aanneming werk
-
-03 Vertegenwoordiger
+*code list:* Soort dienstverband (subset selected)
 
 04 WSW'er
 
 05 Stagiair
 
-06 Thuiswerker
-
 07 Uitzendkracht
 
-08 Musicus / artiest /beroepssporter
+20 Dienstverband onbepaalde tijd
 
-09 Persoonlijke arbeid tegen beloning
+21 Tijdelijke arbeidsovereenkomst
 
-10 Maatschapsvisser
+22 Dienstverband fictief
 
-11 Bestuurder van een cooperatieve vereniging
+23 Oproep/invalkracht
 
-Vereniging met werknemers zelfbestuur.
-
-12 Oproep / invalkracht
-
-13 Vakantiewerk
-
-14 Dienstplichtig militair
-
-15 Ambtenaar / ABP-er
-
-16 Deelvisser
-
-17 Gemoedsbezwaarde
-
-18 Topsporter
-
-19 65-plusser
+24 ZZP
 
 **Functiecode O an..15**
 
@@ -890,6 +866,13 @@ Deze naam hoort bij Onderdeel van organisatie-eenheid, code
 
 Postcode van de standplaats waar de werknemer is tewerkgesteld.
 
+**Omschrijving standplaats O an..70**
+
+*xml tag:* OmsStandplts
+
+Beschrijving of verbijzondering van de plaats of locatie waar de
+werknemer is tewerkgesteld.
+
 **Verdeling, code O an..35**
 
 *xml tag:* VrdlngCd
@@ -925,6 +908,15 @@ week zoals opgenomen in of af te leiden uit de CAO of individuele
 arbeidsovereenkomst.
 
 Bron: Loonaangifte
+
+**Normuren per week O n..6,2**
+
+*xml tag:* AantUNormWk
+
+Norm aantal uren per week. Dit wordt bepaald door de CAO en/of
+aanvullende afspraken bij de werkgever.
+
+Bron: Uniforme Pensioenaangifte
 
 **Soort variabele werktijden, code O an2**
 
@@ -1033,11 +1025,39 @@ preventieve dienst.
 
 99 Overig
 
-**Peventieve dienst toevoeging O an..70**
+**Preventieve dienst toevoeging O an..70**
 
 *xml tag:* PevDienstToev
 
 Aanvulling op Preventieve dienst, code
+
+**Datum vanaf preventieve dienst O an10**
+
+*xml tag:* DatVanPrevD
+
+Datum die aangeeft vanaf welk moment de preventieve dienst ingepland kan
+worden.
+
+**Datum uitvoering preventieve dienst O an10**
+
+*xml tag:* DatTotPrevD
+
+Uiterste datum dat de (volgende) preventieve dienst uitgevoerd moet
+worden.
+
+**Verbijzondering prev. dienst, code O an..10**
+
+*xml tag:* VerbPrevDCode
+
+Een bilateraal afgesproken code. Dit betreft een verbijzondering van de
+Code preventieve dienst.
+
+**Verbijz. prev. dienst, omschrijving O an..70**
+
+*xml tag:* VerbPrevDOms
+
+Een omschrijving van de aangevraagde keuring die overeenkomt met
+Verbijzondering prev. dienst, code.
 
 CONTACTPERSOON 0..9, O
 
