@@ -1,10 +1,10 @@
 **Functional message: Hierarchic**
 
-Business chain: *Verzuim Datamodel 0.2*
+Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Uitwisselen koppel/contractgegevens 2019***
+Functional message: ***Uitwisselen koppel/contractgegevens 2020***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 april 2019
+1 juli 2020
 
 Summary
 
@@ -84,7 +84,7 @@ BERICHT ALGEMEEN 1..1, R
 
 *code list:* Versienummer bericht (subset selected)
 
-00001 Versienummer 1
+00002 Versienummer 2
 
 **<u>Functie bericht</u>**
 
@@ -119,6 +119,13 @@ BERICHT ALGEMEEN 1..1, R
 *xml tag:* IdInzndr
 
 Bilateraal afgesproken codering betreffende de inzender van het bericht.
+
+**Gebruikt softwarepakket R an..35**
+
+*xml tag:* GebrSwPakket
+
+Beschrijving van het softwarepakket dat de aanleveraar heeft gebruikt
+voor de vervaardiging van het bericht.
 
 **<u>Ontvanger</u>**
 
@@ -407,12 +414,6 @@ PERSONEELSSTERKTE 0..999, O
 *xml tag:* Personeelssterkte
 
 Gegevens met betrekking tot het aantal werknemers.
-
-**<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
 
 **<u>Datum waarop de Personeelssterkte is vastgesteld</u>**
 
@@ -915,12 +916,6 @@ PERSONEELSSTERKTE 0..\*, O
 
 Gegevens met betrekking tot het aantal werknemers.
 
-**<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
 **<u>Datum waarop de Personeelssterkte is vastgesteld</u>**
 
 **Peildatum personeelssterkte R an10**
@@ -1130,21 +1125,13 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *xml tag:* SrtComCd
 
-*code list:* Communicatiesoort (all selected)
+*code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-03 Fax
-
-04 E-mail adres
-
-05 Privé e-mail adres
-
-98 Aansluitnummer Serviceprovider
-
-99 Onbekend
+10 Zakelijk mobiele telefoon
 
 **Nummer/adres communicatie R an..512**
 
@@ -1645,7 +1632,7 @@ Bron: NEN 1888: 2002 - Geslacht
 
 M Man
 
-O Onbekend
+O Onbekend/niet gespecificeerd
 
 V Vrouw
 
@@ -1678,11 +1665,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-04 E-mail adres
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 

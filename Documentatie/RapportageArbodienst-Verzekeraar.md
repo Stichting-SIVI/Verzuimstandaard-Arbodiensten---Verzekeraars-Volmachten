@@ -1,10 +1,10 @@
 **Functional message: Hierarchic**
 
-Business chain: *Verzuim Datamodel 0.2*
+Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2019***
+Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2020***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 april 2019
+1 juli 2020
 
 Summary
 
@@ -48,7 +48,7 @@ BERICHT ALGEMEEN 1..1, R
 
 *code list:* Versienummer bericht (subset selected)
 
-00001 Versienummer 1
+00002 Versienummer 2
 
 **<u>Aanmaakdatum</u>**
 
@@ -67,6 +67,13 @@ BERICHT ALGEMEEN 1..1, R
 *xml tag:* IdInzndr
 
 Bilateraal afgesproken codering betreffende de inzender van het bericht.
+
+**Gebruikt softwarepakket R an..35**
+
+*xml tag:* GebrSwPakket
+
+Beschrijving van het softwarepakket dat de aanleveraar heeft gebruikt
+voor de vervaardiging van het bericht.
 
 **<u>Ontvanger</u>**
 
@@ -168,6 +175,9 @@ Norminstantie: SUWI
 **Arbodienst, code O an3**
 
 *xml tag:* ArbdnstCd
+
+De lijst met codes van gecertificeerde Arbodiensten is gepubliceerd op
+de website van SIVI. Zie www.sivi.org.
 
 *code list:* Code Arbodienst (all selected)
 

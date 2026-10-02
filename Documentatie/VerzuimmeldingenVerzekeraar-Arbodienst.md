@@ -1,11 +1,11 @@
 **Functional message: Hierarchic**
 
-Business chain: *Verzuim Datamodel 0.2*
+Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimmeldingen Verzekeraar -\> Arbodienst
-2019***
+2020***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 april 2019
+1 juli 2020
 
 Summary
 
@@ -47,6 +47,8 @@ Werkgever 1..\*, R
 
 5 Communicatie 1..9, R
 
+4 Actie 0..99, O
+
 3 Contactpersoon 0..9, O
 
 4 Communicatie 1..9, R
@@ -73,7 +75,7 @@ BERICHT ALGEMEEN 1..1, R
 
 *code list:* Versienummer bericht (subset selected)
 
-00001 Versienummer 1
+00002 Versienummer 2
 
 **<u>Aanmaakdatum</u>**
 
@@ -92,6 +94,13 @@ BERICHT ALGEMEEN 1..1, R
 *xml tag:* IdInzndr
 
 Bilateraal afgesproken codering betreffende de inzender van het bericht.
+
+**Gebruikt softwarepakket R an..35**
+
+*xml tag:* GebrSwPakket
+
+Beschrijving van het softwarepakket dat de aanleveraar heeft gebruikt
+voor de vervaardiging van het bericht.
 
 **<u>Ontvanger</u>**
 
@@ -264,11 +273,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-04 E-mail adres
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 
@@ -356,11 +365,11 @@ Bron: NEN 1888: 2002 - Geslacht
 
 M Man
 
-O Onbekend
+O Onbekend/niet gespecificeerd
 
 V Vrouw
 
-**Rol contactpersoon, code O an2**
+**Rol contactpersoon, code R an2**
 
 *xml tag:* RolCntprsnCd
 
@@ -393,11 +402,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-04 E-mail adres
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 
@@ -415,22 +424,6 @@ Een werknemer is de natuurlijke persoon met wie een inkomstenverhouding
 binnen de loonadministratie bestaat.
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
-*code list:* Verwerkingscode (all selected)
-
-01 Nieuw
-
-02 Gewijzigd
-
-03 Vervallen
-
-04 Ter identificatie en/ of ter informatie
-
-05 Correctie
 
 **Ingangsdatum mutatie O an10**
 
@@ -562,13 +555,13 @@ Bron: NEN 1888: 2002 - Geslacht
 
 M Man
 
-O Onbekend
+O Onbekend/niet gespecificeerd
 
 V Vrouw
 
 **<u>Identificatie</u>**
 
-**Identificatie werknemer O an..40**
+**Identificatie werknemer R an..40**
 
 *xml tag:* IdWrknmr
 
@@ -592,24 +585,6 @@ PARTNER 0..1, O
 *werkgever - werknemer - PARTNER*
 
 *xml tag:* Prtnr
-
-**<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
-*code list:* Verwerkingscode (all selected)
-
-01 Nieuw
-
-02 Gewijzigd
-
-03 Vervallen
-
-04 Ter identificatie en/ of ter informatie
-
-05 Correctie
 
 **<u>Naamgegevens</u>**
 
@@ -881,13 +856,17 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
-
-02 Mobiele telefoon
-
-04 E-mail adres
-
 05 Privé e-mail adres
+
+06 Zakelijk e-mail adres
+
+07 Privé vaste telefoon
+
+08 Zakelijk vaste telefoon
+
+09 Privé mobiele telefoon
+
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 
@@ -903,29 +882,13 @@ DIENSTVERBAND 1..99, R
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
-*code list:* Verwerkingscode (all selected)
-
-01 Nieuw
-
-02 Gewijzigd
-
-03 Vervallen
-
-04 Ter identificatie en/ of ter informatie
-
-05 Correctie
-
 **Ingangsdatum mutatie O an10**
 
 *xml tag:* IngdatMut
 
 **<u>Identificatie</u>**
 
-**Identificatie dienstverband O an..40**
+**Identificatie dienstverband R an..40**
 
 *xml tag:* IdDnstvbnd
 
@@ -937,7 +900,7 @@ Unieke code voor het dienstverband van de werknemer.
 
 **<u>Datums</u>**
 
-**Ingangsdatum O an10**
+**Ingangsdatum R an10**
 
 *xml tag:* Ingdat
 
@@ -1115,7 +1078,7 @@ Postcode van de standplaats waar de werknemer is tewerkgesteld.
 Bilateraal afgesproken codering ten behoeve van de verdeling van het
 werk.
 
-**<u>Duur contract</u>**
+**<u>Gegevens over arbeidsovereenkomst</u>**
 
 **Code contract onbepaalde / bepaalde tijd O an1**
 
@@ -1134,35 +1097,15 @@ O Onbepaalde tijd
 
 **<u>Beschrijving aantal uren e.d.</u>**
 
-**Contractueel aantal uren per week O n..6,2**
+**Aantal contracturen per week O n..5,2**
 
-*xml tag:* CntrctUrnWk
+*xml tag:* AantCtrcturenPWk
 
-Het aantal uren - conform het arbeidscontract dat van toepassing is bij
-de werkgever - waarop arbeid wordt verricht bij een volledige werkweek.
+Het tussen de werkgever en werknemer vast overeengekomen aantal uren per
+week zoals opgenomen in of af te leiden uit de CAO of individuele
+arbeidsovereenkomst.
 
-**Deeltijdfactor NVS O n..5,2**
-
-*xml tag:* DltfctNVS
-
-Bedoeld voor werknemers die niet voor de volledige werktijd in dienst
-zijn. Vaak vindt berekening plaats door op weekbasis het aantal werkuren
-te delen op het aantal werkuren bij een volledige aanstelling
-(bijvoorbeeld: bij korter werken 24/38 = 0,63; bij langer werken 40/36 =
-1,11).
-
-Berekening: Deeltijdfactor= Werkuren week/Werkuren week volledige
-aanstelling
-
-Bron:
-
-Berekening van ziekteverzuim
-
-NVS Standaard voor verzuimregistratie
-
-Nationale Verzuimstatistiek
-
-November 2004
+Bron: Loonaangifte
 
 **Soort variabele werktijden, code O an2**
 
@@ -1217,24 +1160,6 @@ na afsluiting van een arbeidsovereenkomst.
 
 Dit wordt ook wel aanstelling genoemd.
 
-**<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
-*code list:* Verwerkingscode (all selected)
-
-01 Nieuw
-
-02 Gewijzigd
-
-03 Vervallen
-
-04 Ter identificatie en/ of ter informatie
-
-05 Correctie
-
 **<u>Identificerende gegevens arbeidsrelatie</u>**
 
 **Identificatie arbeidsrelatie R an..40**
@@ -1260,7 +1185,7 @@ Bron: Loonaangifte.
 
 **<u>Data</u>**
 
-**Ingangsdatum O an10**
+**Ingangsdatum R an10**
 
 *xml tag:* Ingdat
 
@@ -1274,7 +1199,7 @@ Bron: Loonaangifte.
 
 **<u>Uren per week</u>**
 
-**Aantal contracturen per week O n..5,2**
+**Aantal contracturen per week R n..5,2**
 
 *xml tag:* AantCtrcturenPWk
 
@@ -1512,8 +1437,6 @@ Bron: Arbo Unie
 
 12 Einde WGA
 
-13 Ziek uit dienst
-
 99 Onbekend
 
 **Reden einde verzuimbegeleiding,code O an2**
@@ -1647,11 +1570,11 @@ Bron: NEN 1888: 2002 - Geslacht
 
 M Man
 
-O Onbekend
+O Onbekend/niet gespecificeerd
 
 V Vrouw
 
-**Rol contactpersoon, code O an2**
+**Rol contactpersoon, code R an2**
 
 *xml tag:* RolCntprsnCd
 
@@ -1685,19 +1608,70 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-04 E-mail adres
-
-05 Privé e-mail adres
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 
 **Nummer/adres communicatie R an..512**
 
 *xml tag:* NrCom
+
+ACTIE 0..99, O
+
+*werkgever - werknemer - dienstverband - verzuim - ACTIE*
+
+*xml tag:* Actie
+
+**<u>Identificatie actie</u>**
+
+**Actie, code R an2**
+
+*xml tag:* ActieCd
+
+Dit betreft de gewenste actie. Gewenst door de werkgever en te initieren
+door de Arbo-dienst.
+
+*code list:* Actiecode (all selected)
+
+01 Conform afspraak
+
+02 Huisbezoek verzuimrapporteur
+
+03 Uitnodigen spreekuur BA
+
+04 Spoedcontrole
+
+05 Actie in overleg
+
+06 Uitnodigen spreekuur binnen 24 uur
+
+07 Overleg BA
+
+08 Geen actie
+
+09 Geen huisbezoek
+
+10 Huisbezoek 1ste dag
+
+11 Huisbezoek dag 2/3
+
+12 Schriftelijke enquete
+
+13 Telefonische enquete
+
+14 Spreekuuroproep
+
+15 Administratieve controle
+
+16 Controle op het werk
+
+17 Avond / weekend controle
+
+18 Direct contact opnemen
 
 CONTACTPERSOON 0..9, O
 
@@ -1779,7 +1753,7 @@ Bron: NEN 1888: 2002 - Geslacht
 
 M Man
 
-O Onbekend
+O Onbekend/niet gespecificeerd
 
 V Vrouw
 
@@ -1816,11 +1790,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *code list:* Communicatiesoort (subset selected)
 
-01 Vaste telefoon
+06 Zakelijk e-mail adres
 
-02 Mobiele telefoon
+08 Zakelijk vaste telefoon
 
-04 E-mail adres
+10 Zakelijk mobiele telefoon
 
 **<u>Nummer</u>**
 
