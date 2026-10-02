@@ -5,7 +5,7 @@ Business chain: *Verzuim Datamodel*
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimrapportage Arbodienst -\> Verzekeraar
-2025***
+2026***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-4 juli 2025
+30 juni 2026
 
 Summary
 
@@ -23,7 +23,7 @@ Werkgever 1..\*, V
 
 1 Werknemer 1..\*, V
 
-2 Dienstverband 1..99, V
+2 Dienstverband 1..999, V
 
 3 Verzuim 1..99, V
 
@@ -55,7 +55,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00003 Versienummer 3
+00004 Versienummer 4
 
 **<u>Aanmaakdatum</u>**
 
@@ -234,7 +234,7 @@ uitgegeven identificatie wordt niet hergebruikt.
 
 *xml tag:* IdWrknmrVzkr
 
-DIENSTVERBAND 1..99, V
+DIENSTVERBAND 1..999, V
 
 *werkgever - werknemer - DIENSTVERBAND*
 
@@ -392,6 +392,10 @@ De datum van de laatste dag waarop de gegevens geldig zijn.
 **Percentage ziek conform werkhervattingsadvies V n..6,2**
 
 *xml tag:* PercZiekConformWerkhervattingsadvies
+
+Het percentage van de voor de werknemer geldende arbeidsomvang waarvoor
+de werknemer volgens het actuele werkhervattingsadvies wegens ziekte nog
+niet inzetbaar is.
 
 ACTIE 0..99, F
 

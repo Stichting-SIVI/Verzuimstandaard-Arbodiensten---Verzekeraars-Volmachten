@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Uitwisselen koppel/contractgegevens 2025***
+Functional message: ***Uitwisselen koppel/contractgegevens 2026***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-4 juli 2025
+6 juli 2026
 
 Summary
 
@@ -31,6 +31,8 @@ Werkgever 1..\*, V
 1 Straatadres Buitenland 0..\*, F
 
 1 Administratieve Eenheid 0..1, F
+
+2 Sector Risicogroep 0..1, F
 
 1 Organisatie eenheid 0..999, F
 
@@ -76,7 +78,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00005 Versienummer 5
+00006 Versienummer 6
 
 **<u>Functie bericht</u>**
 
@@ -768,6 +770,193 @@ Het Loonheffingennummer moet bestaan en in gebruik zijn.
 Voor softwarepakketten is het niet mogelijk om softwarematig te
 controleren of het loonheffingennummer bestaat en in gebruik is.
 
+SECTOR RISICOGROEP 0..1, F
+
+*werkgever - administratieve eenheid - SECTOR RISICOGROEP*
+
+*xml tag:* SectorRisicogroep
+
+Een su-indeling voor administratieve eenheden binnen een sector SV
+waarvoor een eigen premie geldt.
+
+**Code sector OSV V n3**
+
+*xml tag:* CdSectorOsv
+
+De code die het bedrijfs- en beroepsleven indeelt in sectoren, waarbij
+elke sector één of meer takken van bedrijf of beroep of gedeelte daarvan
+omvat.
+
+*code list:* Code sector OSV (all selected)
+
+001 Agrarisch bedrijf
+
+002 Tabaksverwerkende industrie
+
+003 Bouwbedrijf
+
+004 Baggerbedrijf
+
+005 Houten emballage-industrie, etc.
+
+006 Timmerindustrie
+
+007 Meubel- en orgelbouwindustrie
+
+008 Groothandel in hout, etc.
+
+009 Grafische industrie
+
+010 Metaalindustrie
+
+011 Elektrotechnische industrie
+
+012 Metaal- en technische bedrijfstakken
+
+013 Bakkerijen
+
+014 Suikerverwerkende industrie
+
+015 Slagersbedrijven
+
+016 Slagers overig
+
+017 Detailhandel en ambachten
+
+018 Reiniging
+
+019 Grootwinkelbedrijf
+
+020 Havenbedrijven
+
+021 Havenclassificeerders
+
+022 Binnenscheepvaart
+
+023 Visserij
+
+024 Koopvaardij
+
+025 Vervoer KLM
+
+026 Vervoer NS
+
+027 Vervoer Posterijen
+
+028 Taxivervoer
+
+029 Openbaar vervoer
+
+030 Besloten busvervoer
+
+031 Overig personenvervoer te land en in de lucht
+
+032 Overig goederenvervoer te land en in de lucht
+
+033 Horeca algemeen
+
+034 Horeca catering
+
+035 Gezondheiid, geestelijke en maatschappelijke belangen
+
+038 Banken
+
+039 Verzekeringswezen
+
+040 Uitgeverij
+
+041 Groothandel I
+
+042 Groothandel II
+
+043 Zakelijke dienstverlening I
+
+044 Zakelijke dienstverlening II
+
+045 Zakelijke dienstverlening III
+
+046 Zuivelindustrie
+
+047 Textielindustrie
+
+048 Steen-, cement-, glas-, en keramische industrie
+
+049 Chemische industrie
+
+050 Voedingsindustrie
+
+051 Algemene industrie
+
+052 Uitzendbedrijven
+
+053 Bewakingsondernemingen
+
+054 Culturele instellingen
+
+055 Overige takken van bedrijf en beroep
+
+056 Schildersbedrijf
+
+057 Stukadoorsbedrijf
+
+058 Dakdekkerbedrijf
+
+059 Mortelbedrijf
+
+060 Steenhouwersbedrijf
+
+061 Overheid, onderwijs en wetenschappen
+
+062 Overheid, rijk, politie en rechterlijke macht
+
+063 Overheid, defensie
+
+064 Overheid, provincies, gemeenten en waterschappen
+
+065 Overheid, openbare nutsbedrijven
+
+066 Overheid, overige instellingen
+
+067 Werk en (re)integratie
+
+068 Railbouw
+
+069 Telecommunicatie
+
+998 Sector niet van toepassing
+
+**Code risicopremiegroep F n2**
+
+*xml tag:* CdRisicopremiegroep
+
+De code die de rsicopremiegroep binnen de sector aangeeft.
+
+*code list:* Code risicogroep (all selected)
+
+00 Niet van toepassing
+
+01 Premiegroep kortingsklasse
+
+02 Premiegroep middenklasse
+
+03 Premiegroep opslagklasse
+
+04 Premiegroep kortingsklasse
+
+05 Premiegroep middenklasse
+
+06 Premiegroep opslagklasse
+
+07 Premiegroep detachering
+
+08 Premiegroep intermediaire diensten
+
+09 Uitzendbedrijven I B + II B
+
+10 Uitzendbedrijven I A
+
+11 Uitzendbedrijven II A
+
 ORGANISATIE EENHEID 0..999, F
 
 *werkgever - ORGANISATIE EENHEID*
@@ -999,6 +1188,10 @@ maakt met hulpmiddelen met elkaar te communiceren.
 **Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
+
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
 
 DIENSTVERLENING 0..9, F
 
@@ -1379,6 +1572,10 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *xml tag:* NrCom
 
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
+
 CONTACTPERSOON 0..\*, F
 
 *werkgever - CONTACTPERSOON*
@@ -1499,3 +1696,7 @@ maakt met hulpmiddelen met elkaar te communiceren.
 **Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
+
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567

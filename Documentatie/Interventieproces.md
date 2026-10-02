@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basistransactie Verzuim*
 
-Functional message: ***Interventieproces 2025***
+Functional message: ***Interventieproces 2026***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-4 juli 2025
+6 juli 2026
 
 Summary
 
@@ -22,7 +22,7 @@ Werkgever 1..\*, V
 
 1 Werknemer 1..\*, V
 
-2 Dienstverband 1..99, V
+2 Dienstverband 1..999, V
 
 3 Arbeidsrelatie 0..1, F
 
@@ -50,7 +50,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00001 Versienummer 1
+00002 Versienummer 2
 
 **Functie bericht, code V an2**
 
@@ -259,7 +259,7 @@ uitgegeven identificatie wordt niet hergebruikt.
 
 *xml tag:* IdWrknmrVzkr
 
-DIENSTVERBAND 1..99, V
+DIENSTVERBAND 1..999, V
 
 *werkgever - werknemer - DIENSTVERBAND*
 

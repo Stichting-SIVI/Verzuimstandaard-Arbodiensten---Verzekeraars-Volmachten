@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basistransactie Verzuim*
 
-Functional message: ***Aanvraag preventieve diensten verzekeraar 2025***
+Functional message: ***Aanvraag preventieve diensten verzekeraar 2026***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-4 juli 2025
+24 juni 2026
 
 Summary
 
@@ -36,7 +36,7 @@ Werkgever 1..\*, V
 
 2 Communicatie 0..9, F
 
-2 Dienstverband 1..99, V
+2 Dienstverband 1..999, V
 
 3 Preventieve dienst 0..9, F
 
@@ -68,7 +68,7 @@ BERICHT ALGEMEEN 1..1, V
 
 *code list:* Versienummer bericht (subset selected)
 
-00004 Versienummer 4
+00005 Versienummer 5
 
 **<u>Aanmaakdatum</u>**
 
@@ -240,6 +240,10 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *xml tag:* NrCom
 
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
+
 CONTACTPERSOON 0..9, F
 
 *werkgever - CONTACTPERSOON*
@@ -370,6 +374,10 @@ maakt met hulpmiddelen met elkaar te communiceren.
 **Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
+
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
 
 WERKNEMER 1..\*, V
 
@@ -769,7 +777,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 *xml tag:* NrCom
 
-DIENSTVERBAND 1..99, V
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
+
+DIENSTVERBAND 1..999, V
 
 *werkgever - werknemer - DIENSTVERBAND*
 
@@ -1239,6 +1251,10 @@ maakt met hulpmiddelen met elkaar te communiceren.
 **Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
+
+Het veld bevat een geldige duiding van de soort communicatie, zoals
+e-mailadres of telefoonummer. In het geval van een telefoonnummer is het
+formaat in het bericht volgens ITU-T E.164: +31201234567
 
 ARBEIDSRELATIE 0..1, F
 
