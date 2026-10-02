@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Uitwisselen koppel/contractgegevens 2021***
+Functional message: ***Uitwisselen koppel/contractgegevens 2022***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-25 juni 2021
+1 juli 2022
 
 Summary
 
@@ -499,6 +499,8 @@ huisnummer.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Generiek voor adres</u>**
 
 **Postcode R an6**
@@ -570,6 +572,8 @@ De gegevens van een postbusadres in Nederland.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Generiek voor adres</u>**
 
 **Postcode R an6**
@@ -618,6 +622,8 @@ en huisnummer.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres buitenland</u>**
 
@@ -705,6 +711,8 @@ Gegevens van een postbusadres in het buitenland.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres buitenland</u>**
 
@@ -1027,6 +1035,8 @@ Het contract dat de werkgever met de arbodienst heeft gesloten.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Status</u>**
 
 **Status contract, code R an2**
@@ -1193,6 +1203,8 @@ Geeft aan welke dienstverlening wordt afgenomen.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 VERZEKERING/DEKKING 0..99, O
 
 *werkgever - VERZEKERING/DEKKING*
@@ -1243,6 +1255,8 @@ deel uitmaakt.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **Contract periode O an..2**
 
@@ -1355,7 +1369,7 @@ Wachttijd eigen risico in werkdagen.
 
 **Dekkingspercentage jaar 1 O n..6,2**
 
-*xml tag:*
+*xml tag:* PrcDkkngJr1
 
 **Dekkingspercentage jaar 2 O n..6,2**
 

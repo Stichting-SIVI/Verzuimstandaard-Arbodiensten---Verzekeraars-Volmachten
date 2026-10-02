@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2021***
+Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2022***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,7 +12,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-25 juni 2021
+1 juli 2022
 
 Summary
 
@@ -196,6 +196,8 @@ VERSLAGPERIODE 1..999, R
 **Einddatum R an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 RAPPORTAGE 1..1, R
 

@@ -5,7 +5,7 @@ Business chain: *Verzuim Datamodel*
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimrapportage Arbodienst -\> Verzekeraar
-2021***
+2022***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-25 juni 2021
+1 juli 2022
 
 Summary
 
@@ -512,6 +512,8 @@ Bijvoorbeeld de naam van een verpleeginrichting.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Generiek voor adres</u>**
 
 **Postcode R an6**
@@ -625,6 +627,8 @@ Bijvoorbeeld de naam van een verpleeginrichting.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres buitenland</u>**
 
@@ -751,7 +755,9 @@ VERZUIM 1..99, R
 
 *xml tag:* VrzmgvlId
 
-Unieke identificatie van het verzuimgeval.
+Unieke identificatie van het verzuimgeval voor één dienstverband. Als
+een werknemer verzuim heeft op meerdere dienstverbanden, geldt per
+dienstverband een unieke "Verzuimgeval identificatie".
 
 Uniek per werkgever ook in de tijd.
 
@@ -862,6 +868,8 @@ Periode waar het werkhervattingsadvies betrekking op heeft.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Gegevens advies</u>**
 

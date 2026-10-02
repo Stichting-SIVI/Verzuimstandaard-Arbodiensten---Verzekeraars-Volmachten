@@ -5,7 +5,7 @@ Business chain: *Verzuim Datamodel*
 Transaction type: *Basistransactie Verzuim*
 
 Functional message: ***Verzuimmeldingen Verzekeraar -\> Arbodienst
-2021***
+2022***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -13,7 +13,7 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-25 juni 2021
+1 juli 2022
 
 Summary
 
@@ -75,7 +75,7 @@ BERICHT ALGEMEEN 1..1, R
 
 *code list:* Versienummer bericht (subset selected)
 
-00003 Versienummer 3
+00004 Versienummer 4
 
 **<u>Aanmaakdatum</u>**
 
@@ -666,6 +666,8 @@ Bijvoorbeeld de naam van een verpleeginrichting.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Generiek voor adres</u>**
 
 **Postcode R an6**
@@ -773,6 +775,8 @@ Bijvoorbeeld de naam van een verpleeginrichting.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres buitenland</u>**
 
@@ -907,6 +911,8 @@ Unieke code voor het dienstverband van de werknemer.
 **Einddatum O an10**
 
 *xml tag:* Enddat
+
+De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Directeur grootaandeelhouder gegevens</u>**
 
@@ -1086,7 +1092,8 @@ O Onbepaalde tijd
 
 Het tussen de werkgever en werknemer vast overeengekomen aantal uren per
 week zoals opgenomen in of af te leiden uit de CAO of individuele
-arbeidsovereenkomst.
+arbeidsovereenkomst of dat voortvloeit uit de publiekrechtelijke
+aanstelling of de fictieve dienstbetrekking.
 
 Bron: Loonaangifte
 
@@ -1189,6 +1196,8 @@ Bron: Loonaangifte.
 
 *xml tag:* Enddat
 
+De datum van de laatste dag waarop de gegevens geldig zijn.
+
 **<u>Uren per week</u>**
 
 **Aantal contracturen per week R n..5,2**
@@ -1241,7 +1250,9 @@ Oorspronkelijke ingangsdatum mutatie verzuim.
 
 *xml tag:* VrzmgvlId
 
-Unieke identificatie van het verzuimgeval.
+Unieke identificatie van het verzuimgeval voor één dienstverband. Als
+een werknemer verzuim heeft op meerdere dienstverbanden, geldt per
+dienstverband een unieke "Verzuimgeval identificatie".
 
 Uniek per werkgever ook in de tijd.
 
@@ -1344,6 +1355,12 @@ rooster.
 
 Datum waarop het einde van het verzuim van de persoon is gemeld bij zijn
 werkgever.
+
+**Datum verwacht herstel O an10**
+
+*xml tag:* DatVrwHrstl
+
+De verwachtte datum hersteld, op basis van een inschatting.
 
 **<u>Gegevens over verzuim</u>**
 
