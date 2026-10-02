@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Uitwisselen koppel/contractgegevens 2022***
+Functional message: ***Uitwisselen koppel/contractgegevens 2024***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,57 +12,49 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 juli 2022
+5 juli 2024
 
 Summary
 
-Bericht algemeen 1..1, R
+Bericht algemeen 1..1, V
 
-Verzekeraar/Volmacht 1..1, R
+Verzekeraar/Volmacht 1..1, V
 
-Arbodienst 1..1, R
+Arbodienst 1..1, V
 
-Werkgever 1..\*, R
+Werkgever 1..\*, V
 
-1 Personeelssterkte 0..999, O
+1 Personeelssterkte 0..999, F
 
-1 Straatadres Nederland 0..9, O
+1 Straatadres Nederland 0..9, F
 
-1 Postbusadres Nederland 0..9, O
+1 Straatadres Buitenland 0..\*, F
 
-1 Straatadres Buitenland 0..\*, O
+1 Administratieve Eenheid 0..1, F
 
-1 Postbusadres Buitenland 0..\*, O
+1 Organisatie eenheid 0..999, F
 
-1 Administratieve Eenheid 0..1, O
+2 Personeelssterkte 0..\*, F
 
-1 Organisatie eenheid 0..999, O
+1 Arbocontract 0..9, F
 
-2 Personeelssterkte 0..\*, O
+2 Intermediair 0..1, F
 
-1 Arbocontract 0..9, O
+3 Communicatie 0..9, F
 
-2 Intermediair 0..1, O
+2 Dienstverlening 0..9, F
 
-3 Straatadres Nederland 0..\*, O
+1 Verzekering/Dekking 0..99, F
 
-3 Communicatie 0..9, O
+1 Machtigingen uitwisseling verzuim 0..1, F
 
-2 Dienstverlening 0..9, O
+1 Communicatie 0..9, F
 
-1 Verzekering/Dekking 0..99, O
+1 Contactpersoon 0..\*, F
 
-2 Afspraken Uitwisseling Verzuimdata 0..9, O
+2 Communicatie 0..\*, F
 
-1 Afspraken Uitwisseling Verzuimdata 0..9, O
-
-1 Communicatie 0..9, O
-
-1 Contactpersoon 0..\*, O
-
-2 Communicatie 0..\*, O
-
-BERICHT ALGEMEEN 1..1, R
+BERICHT ALGEMEEN 1..1, V
 
 *BERICHT ALGEMEEN*
 
@@ -70,7 +62,7 @@ BERICHT ALGEMEEN 1..1, R
 
 **<u>Soort bericht + versienummer</u>**
 
-**Bericht, code R an..5**
+**Bericht, code V an..5**
 
 *xml tag:* BrCd
 
@@ -78,21 +70,21 @@ BERICHT ALGEMEEN 1..1, R
 
 00700 Uitwisselen koppel/contractgegevens
 
-**Versienummer bericht, code R an..5**
+**Versienummer bericht, code V an..5**
 
 *xml tag:* VnrBrCd
 
 *code list:* Versienummer bericht (subset selected)
 
-00002 Versienummer 2
+00004 Versienummer 4
 
 **<u>Functie bericht</u>**
 
-**Functie bericht, code R an2**
+**Functie bericht, code V an2**
 
 *xml tag:* FunctieBrCd
 
-*code list:* SIVI (all selected)
+*code list:* SIVI (subset selected)
 
 01 Koppelgegevens verzekeraar --\> arbodienst
 
@@ -104,23 +96,23 @@ BERICHT ALGEMEEN 1..1, R
 
 **<u>Aanmaakdatum</u>**
 
-**Aanmaakdatum bericht R an10**
+**Aanmaakdatum bericht V an10**
 
 *xml tag:* AandatBr
 
-**Aanmaaktijd bericht R an8**
+**Aanmaaktijd bericht V an8**
 
 *xml tag:* AantijdBr
 
 **<u>Inzender</u>**
 
-**Identificatie inzender R an..40**
+**Identificatie inzender V an..40**
 
 *xml tag:* IdInzndr
 
 Bilateraal afgesproken codering betreffende de inzender van het bericht.
 
-**Gebruikt softwarepakket R an..35**
+**Gebruikt softwarepakket V an..35**
 
 *xml tag:* GebrSwPakket
 
@@ -129,7 +121,7 @@ voor de vervaardiging van het bericht.
 
 **<u>Ontvanger</u>**
 
-**Identificatie ontvanger R an..40**
+**Identificatie ontvanger V an..40**
 
 *xml tag:* IdOntvngr
 
@@ -138,11 +130,11 @@ Bilateraal afgesproken codering betreffende de ontvanger
 
 **<u>Berichtreferentie</u>**
 
-**Berichtreferentienummer R an..512**
+**Berichtreferentienummer V an..512**
 
 *xml tag:* Berrefnr
 
-**Berichtreferentienummer ingezonden bericht O an..512**
+**Berichtreferentienummer ingezonden bericht F an..512**
 
 *xml tag:* BerrefnrIngzndnBer
 
@@ -151,7 +143,7 @@ reactie op is.
 
 **<u>Testindicatie</u>**
 
-**Test J/N R a1**
+**Test J/N V a1**
 
 *xml tag:* TestJN
 
@@ -165,7 +157,7 @@ N Nee
 
 **<u>Ontvangstbevestiging</u>**
 
-**Ontvangstbevestiging gewenst J/N R a1**
+**Ontvangstbevestiging gewenst J/N V a1**
 
 *xml tag:* OntvngstbevJN
 
@@ -179,7 +171,7 @@ N Nee
 
 **<u>Contractgegevens gewenst</u>**
 
-**Contractgegevens gewenst J/N R a1**
+**Contractgegevens gewenst J/N V a1**
 
 *xml tag:* CntrctGegGewenstJN
 
@@ -192,7 +184,7 @@ J Ja
 
 N Nee
 
-VERZEKERAAR/VOLMACHT 1..1, R
+VERZEKERAAR/VOLMACHT 1..1, V
 
 *VERZEKERAAR/VOLMACHT*
 
@@ -200,7 +192,7 @@ VERZEKERAAR/VOLMACHT 1..1, R
 
 **<u>Handelsnaam</u>**
 
-**Handelsnaam organisatie R an..100**
+**Handelsnaam organisatie V an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -211,7 +203,7 @@ Norminstantie: SUWI
 
 **<u>Identificerende gegevens</u>**
 
-**Identificatie verzekeraar/volmacht, code R an..4**
+**Identificatie verzekeraar/volmacht, code V an..4**
 
 *xml tag:* IdVrzkrVolmachtCd
 
@@ -223,7 +215,7 @@ verzekeraars/volmachten. Zie www.sivi.org.
 
 *The codes of this codelist are documented in a separate document*
 
-ARBODIENST 1..1, R
+ARBODIENST 1..1, V
 
 *ARBODIENST*
 
@@ -231,7 +223,7 @@ ARBODIENST 1..1, R
 
 **<u>Handelsnaam</u>**
 
-**Handelsnaam organisatie O an..100**
+**Handelsnaam organisatie F an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -242,7 +234,7 @@ Norminstantie: SUWI
 
 **<u>Arbo-dienst</u>**
 
-**Arbodienst, code R an3**
+**Arbodienst, code V an3**
 
 *xml tag:* ArbdnstCd
 
@@ -253,7 +245,7 @@ de website van SIVI. Zie www.sivi.org.
 
 *The codes of this codelist are documented in a separate document*
 
-WERKGEVER 1..\*, R
+WERKGEVER 1..\*, V
 
 *WERKGEVER*
 
@@ -264,7 +256,7 @@ aantal gevallen de term Inhoudingsplichtige gebruikt.
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
@@ -282,7 +274,7 @@ aantal gevallen de term Inhoudingsplichtige gebruikt.
 
 **<u>Handelsnaam</u>**
 
-**Handelsnaam organisatie R an..100**
+**Handelsnaam organisatie V an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -293,7 +285,7 @@ Norminstantie: SUWI
 
 **<u>Kamer van Koophandel</u>**
 
-**Inschrijvingsnummer Kamer van Koophandel O n..8**
+**Inschrijvingsnummer Kamer van Koophandel F n..8**
 
 *xml tag:* InschrijvingsnrKvK
 
@@ -302,7 +294,7 @@ ondernemingen zoals vermeld in de Handelsregisterwet.
 
 Bron: SUWI Gegevens Register
 
-**Vestigingsnummer O n..12**
+**Vestigingsnummer F n..12**
 
 *xml tag:* VestigingsnrHandelsregister
 
@@ -310,9 +302,9 @@ Een identificerend nummer voor een vestiging in het Handelsregister.
 
 Norminstantie: Handelsregister
 
-**<u>Identificatie bij de Arbo-dienst</u>**
+**<u>Identificatie bij de arbodienst</u>**
 
-**Identificatie werkgever bij Arbo-dienst O an..40**
+**Identificatie werkgever bij arbodienst F an..40**
 
 *xml tag:* IdWrkgvrArbdnst
 
@@ -320,7 +312,7 @@ De identificatiecode die de arbodienst heeft aangeleverd aan de
 werkgever waardoor de werkgever wordt onderscheden van andere werkgevers
 in de administratie van de arbodienst.
 
-**Aansluitnummer gegevensuitwisseling Arbodienst O an..70**
+**Aansluitnummer gegevensuitwisseling Arbodienst F an..70**
 
 *xml tag:* AansltnrGeguitwlngArbdnst
 
@@ -328,15 +320,27 @@ Het aansluitnummer voor de gegevensuitwisseling dat de arbodienst heeft
 aangeleverd aan de werkgever waardoor de werkgever wordt onderscheden
 van andere werkgevers in de administratie van de arbodienst.
 
+**Reden geen gegevensuitwisseling, code F an..2**
+
+*xml tag:* RdnGnGgvnsuitw
+
+*code list:* Reden geen gegevensuitwisseling, code (all selected)
+
+01 WerkgevrID onjuist
+
+02 Werkgever onbekend
+
+03 Werkgevergegevens komen niet overeen
+
 **<u>Identificatie bij verzekeraar</u>**
 
-**Identificatie werkgever bij verzekeraar O an..40**
+**Identificatie werkgever bij verzekeraar F an..40**
 
 *xml tag:* IDWrkgvrVerzekeraar
 
 **<u>Identificatie bij UWV</u>**
 
-**Identificatie werkgever bij UWV O an..40**
+**Identificatie werkgever bij UWV F an..40**
 
 *xml tag:* IdWrkgvrUWV
 
@@ -347,7 +351,7 @@ administratie van het UWV.
 
 **<u>Loonbelasting / loonheffingen</u>**
 
-**Loonheffingennummer O an..12**
+**Loonheffingennummer F an..12**
 
 *xml tag:* Lhnr
 
@@ -355,17 +359,9 @@ Een door de Belastingdienst toegekende identificatie voor de
 administratieve eenheid waaronder de werkgever bekend is en
 loonheffingen afdraagt.
 
-**<u>Codering organisatie-eenheid</u>**
-
-**Organisatie-eenheid, code R an..70**
-
-*xml tag:* OrgeenhCd
-
-Bilateraal afgesproken codering van de organisatie-eenheid.
-
 **<u>Eigenrisicodragerschap</u>**
 
-**Identificatie verzekeraar ERD WGA, code O an..4**
+**Identificatie verzekeraar ERD WGA, code F an..4**
 
 *xml tag:* IdVrzkrWGACd
 
@@ -375,7 +371,7 @@ Hiervoor wordt de POR-code gebruikt. Zie www.sivi.org.
 
 *The codes of this codelist are documented in a separate document*
 
-**Identificatie verzekeraar ERD ZW, code O an..4**
+**Identificatie verzekeraar ERD ZW, code F an..4**
 
 *xml tag:* IdVrzkrERDZWCd
 
@@ -387,7 +383,7 @@ Hiervoor wordt de POR-code gebruikt. Zie www.sivi.org.
 
 **<u>Collectieve zorgverzekering</u>**
 
-**Identificatie verzekeraar collectieve zorg, code O an..4**
+**Identificatie verzekeraar collectieve zorg, code F an..4**
 
 *xml tag:* IdVrzkrCollectieveZorgCd
 
@@ -399,7 +395,7 @@ Hiervoor wordt de POR-code gebruikt. Zie www.sivi.org.
 
 **<u>Sector waarin werkgever opereert</u>**
 
-**Sector volgens SBI O n..5**
+**Sector volgens SBI F n..5**
 
 *xml tag:* SectorVolgensSBI
 
@@ -407,7 +403,7 @@ De sector waarin de werkgever opereert volgens de Standaard
 Bedrijfsindeling (SBI) het Centraal Bureau voor de Statistiek van
 Nederland.
 
-PERSONEELSSTERKTE 0..999, O
+PERSONEELSSTERKTE 0..999, F
 
 *werkgever - PERSONEELSSTERKTE*
 
@@ -417,70 +413,70 @@ Gegevens met betrekking tot het aantal werknemers.
 
 **<u>Datum waarop de Personeelssterkte is vastgesteld</u>**
 
-**Peildatum personeelssterkte R an10**
+**Peildatum personeelssterkte V an10**
 
 *xml tag:* PeildatPersoneelssterkte
 
 De datum waarop de personeelssterkte - in termen van aantallen
 werknemers en FTE - is vastgesteld.
 
-**Vorige peildatum personeelssterkte O an10**
+**Vorige peildatum personeelssterkte F an10**
 
 *xml tag:* VorigePeildatPersoneelssterkte
 
 **<u>Gegevens over de personeelssterkte</u>**
 
-**Aantal werknemers R n..7**
+**Aantal werknemers V n..7**
 
 *xml tag:* AantWrknmrs
 
-**Aantal werknemers in dienst sinds vorige peildatum O n..7**
+**Aantal werknemers in dienst sinds vorige peildatum F n..7**
 
 *xml tag:* AantWrknmrsInDienstSindsVorigePeildat
 
-**Aantal werknemers uit dienst sinds vorige peildatum O n..7**
+**Aantal werknemers uit dienst sinds vorige peildatum F n..7**
 
 *xml tag:* AantWrknmrsUitDienstSindsVorigePeildat
 
-**Aantal nulurencontracten O n..7**
+**Aantal nulurencontracten F n..7**
 
 *xml tag:* AantalNulurencntrcten
 
-**Aantal FTE O n..7**
+**Aantal FTE F n..7**
 
 *xml tag:* AantFTE
 
-**Aantal vrouwelijke werknemers O n..5**
+**Aantal vrouwelijke werknemers F n..5**
 
 *xml tag:* AantVrouwelijkeWrknmrs
 
 Het aantal vrouwelijke werknemers dat werkt bij de werkgever.
 
-**Aantal vrouwelijke FTE O n..5**
+**Aantal vrouwelijke FTE F n..5**
 
 *xml tag:* AantVrouwelijkeFTE
 
 Het aantal vrouwelijke FTE dat werkt bij de werkgever.
 
-**Aantal mannelijke werknemers O n..5**
+**Aantal mannelijke werknemers F n..5**
 
 *xml tag:* AantMannelijkeWrknmrs
 
 Het aantal mannelijke werknemers dat werkt bij de werkgever.
 
-**Aantal mannelijke FTE O n..5**
+**Aantal mannelijke FTE F n..5**
 
 *xml tag:* AantMannelijkeFTE
 
 Het aantal mannelijke FTE dat werkt bij de werkgever.
 
-**Aantal uren FTE O n..3**
+**Aantal uren FTE F n..3**
 
 *xml tag:* AantUrenFTE
 
 Aantal uren dat 1 FTE wordt geacht te werken in een werkweek.
 
-STRAATADRES NEDERLAND 0..9, O
+STRAATADRES NEDERLAND 0..9, F
 
 *werkgever - STRAATADRES NEDERLAND*
 
@@ -489,13 +485,29 @@ STRAATADRES NEDERLAND 0..9, O
 Een adres in Nederland dat wordt bepaald aan de hand van straatnaam en
 huisnummer.
 
+**<u>Soort adres</u>**
+
+**Soort adres, code F an2**
+
+*xml tag:* SrtAdrsCd
+
+*code list:* Soort adres (subset selected)
+
+01 Woonadres, verblijfadres of vestigingsadres
+
+02 Postadres cq correspondentie adres
+
+03 Factuuradres
+
+05 OR adres
+
 **<u>Periode geldig</u>**
 
-**Ingangsdatum O an10**
+**Ingangsdatum F an10**
 
 *xml tag:* Ingdat
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
@@ -503,7 +515,7 @@ De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres</u>**
 
-**Postcode R an6**
+**Postcode V an6**
 
 *xml tag:* Pc
 
@@ -512,7 +524,7 @@ woonplaatscode een alfabetische lettercode.
 
 Norminstantie: NEN 5825 (Postcode)
 
-**Woonplaatsnaam O an..24**
+**Woonplaatsnaam F an..24**
 
 *xml tag:* Wnpl
 
@@ -522,7 +534,7 @@ Norm(instantie): NEN 5825 (Woonplaatsnaam)
 
 **<u>Specifiek voor straatadres Nederland</u>**
 
-**Straatnaam\_ O an..80**
+**Straatnaam\_ F an..80**
 
 *xml tag:* StraatLang
 
@@ -536,7 +548,7 @@ Norm(instantie)
 
 NEN 5825 (Straatnaam)
 
-**Huisnummer R n..5**
+**Huisnummer V n..5**
 
 *xml tag:* Huisnr
 
@@ -545,7 +557,7 @@ toegekend.
 
 Norminstantie: NEN 5825 (Huisnummer)
 
-**Huisnummertoevoeging O an..4**
+**Huisnummertoevoeging F an..4**
 
 *xml tag:* HuisToev
 
@@ -554,57 +566,7 @@ gemeente.
 
 Norminstantie: NEN 5825 (Huisnummertoevoeging)
 
-POSTBUSADRES NEDERLAND 0..9, O
-
-*werkgever - POSTBUSADRES NEDERLAND*
-
-*xml tag:* PbadrsNl
-
-De gegevens van een postbusadres in Nederland.
-
-**<u>Periode geldig</u>**
-
-**Ingangsdatum O an10**
-
-*xml tag:* Ingdat
-
-**Einddatum O an10**
-
-*xml tag:* Enddat
-
-De datum van de laatste dag waarop de gegevens geldig zijn.
-
-**<u>Generiek voor adres</u>**
-
-**Postcode R an6**
-
-*xml tag:* Pc
-
-De officiële Nederlandse codering, bestaande uit een numerieke
-woonplaatscode een alfabetische lettercode.
-
-Norminstantie: NEN 5825 (Postcode)
-
-**Woonplaatsnaam O an..24**
-
-*xml tag:* Wnpl
-
-De door de gemeente vastgestelde naam van een woonplaats.
-
-Norm(instantie): NEN 5825 (Woonplaatsnaam)
-
-**<u>Specifiek voor postbusadres</u>**
-
-**Postbusnummer R n..5**
-
-*xml tag:* Pbnr
-
-De numerieke aanduiding zoals deze door de Nederlandse TPG Post is
-vastgesteld voor postbusadressen.
-
-Norminstantie: NEN 5825 (Postbusnummer)
-
-STRAATADRES BUITENLAND 0..\*, O
+STRAATADRES BUITENLAND 0..\*, F
 
 *werkgever - STRAATADRES BUITENLAND*
 
@@ -613,13 +575,29 @@ STRAATADRES BUITENLAND 0..\*, O
 Een adres in het buitenland dat wordt bepaald aan de hand van straatnaam
 en huisnummer.
 
+**<u>Soort adres</u>**
+
+**Soort adres, code F an2**
+
+*xml tag:* SrtAdrsCd
+
+*code list:* Soort adres (subset selected)
+
+01 Woonadres, verblijfadres of vestigingsadres
+
+02 Postadres cq correspondentie adres
+
+03 Factuuradres
+
+05 OR adres
+
 **<u>Periode geldig</u>**
 
-**Ingangsdatum O an10**
+**Ingangsdatum F an10**
 
 *xml tag:* Ingdat
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
@@ -627,7 +605,7 @@ De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Generiek voor adres buitenland</u>**
 
-**Locatieomschrijving buitenland O an..35**
+**Locatieomschrijving buitenland F an..35**
 
 *xml tag:* LocomsBtl
 
@@ -635,7 +613,7 @@ Een nadere aanduiding bij een buitenlands adres.
 
 Bron: SUWI
 
-**Postcode buitenland O an..9**
+**Postcode buitenland F an..9**
 
 *xml tag:* PcBtl
 
@@ -644,7 +622,7 @@ in het buitenland.
 
 Bron: SUWI
 
-**Woonplaatsnaam buitenland R an..24**
+**Woonplaatsnaam buitenland V an..24**
 
 *xml tag:* WnplBtl
 
@@ -652,7 +630,7 @@ De naam van een woonplaats in het buitenland.
 
 Bron: SUWI
 
-**Regionaam buitenland O an..24**
+**Regionaam buitenland F an..24**
 
 *xml tag:* RegBtl
 
@@ -660,7 +638,7 @@ De naam van een gebiedsdeel binnen een land.
 
 Bron: SUWI
 
-**Land, code R a2**
+**Land, code V a2**
 
 *xml tag:* LandCd
 
@@ -672,7 +650,7 @@ Norminstantie: ISO 3166 (Entity, Alpha-2 code)
 
 *The codes of this codelist are documented in a separate document*
 
-**Landnaam O an..40**
+**Landnaam F an..40**
 
 *xml tag:* Landnm
 
@@ -682,100 +660,19 @@ Bron: SUWI
 
 **<u>Specifiek voor straatadres buitenland</u>**
 
-**Straatnaam\_ O an..80**
+**Straatnaam\_ F an..80**
 
 *xml tag:* StraatLang
 
-**Huisnummer buitenland R an..9**
+**Huisnummer buitenland V an..9**
 
 *xml tag:* HuisnrBtl
 
-**Huisnummer toevoeging buitenland O an..70**
+**Huisnummer toevoeging buitenland F an..70**
 
 *xml tag:* HuisnrToevBtl
 
-POSTBUSADRES BUITENLAND 0..\*, O
-
-*werkgever - POSTBUSADRES BUITENLAND*
-
-*xml tag:*
-
-Gegevens van een postbusadres in het buitenland.
-
-**<u>Periode geldig</u>**
-
-**Ingangsdatum O an10**
-
-*xml tag:* Ingdat
-
-**Einddatum O an10**
-
-*xml tag:* Enddat
-
-De datum van de laatste dag waarop de gegevens geldig zijn.
-
-**<u>Generiek voor adres buitenland</u>**
-
-**Locatieomschrijving buitenland O an..35**
-
-*xml tag:* LocomsBtl
-
-Een nadere aanduiding bij een buitenlands adres.
-
-Bron: SUWI
-
-**Postcode buitenland O an..9**
-
-*xml tag:* PcBtl
-
-Een door de buitenlandse postdienst vastgestelde codering voor een adres
-in het buitenland.
-
-Bron: SUWI
-
-**Woonplaatsnaam buitenland R an..24**
-
-*xml tag:* WnplBtl
-
-De naam van een woonplaats in het buitenland.
-
-Bron: SUWI
-
-**Regionaam buitenland O an..24**
-
-*xml tag:* RegBtl
-
-De naam van een gebiedsdeel binnen een land.
-
-Bron: SUWI
-
-**Land, code R a2**
-
-*xml tag:* LandCd
-
-De code van een huidig land of gebiedsdeel conform ISO 3166.
-
-Norminstantie: ISO 3166 (Entity, Alpha-2 code)
-
-*code list:* ISO landcode (all selected)
-
-*The codes of this codelist are documented in a separate document*
-
-**Landnaam O an..40**
-
-*xml tag:* Landnm
-
-De naam van een land of een gebiedsdeel.
-
-Bron: SUWI
-
-**<u>Specifieke gegevens postbusadres buitenland</u>**
-
-**Postbusnummer buitenland R an..7**
-
-*xml tag:*
-
-ADMINISTRATIEVE EENHEID 0..1, O
+ADMINISTRATIEVE EENHEID 0..1, F
 
 *werkgever - ADMINISTRATIEVE EENHEID*
 
@@ -811,7 +708,7 @@ aangiftetijdvakken vanaf die datum geldt de nieuwe sectorcode.
 
 **<u>Naam gegevens</u>**
 
-**Naam inhoudingsplichtige R an..200**
+**Naam inhoudingsplichtige V an..200**
 
 *xml tag:* NmIp
 
@@ -836,7 +733,7 @@ loonheffingennummer.
 
 **<u>Overige gegevens</u>**
 
-**Loonheffingennummer O an..12**
+**Loonheffingennummer F an..12**
 
 *xml tag:* LhNr
 
@@ -869,7 +766,7 @@ Het Loonheffingennummer moet bestaan en in gebruik zijn.
 Voor softwarepakketten is het niet mogelijk om softwarematig te
 controleren of het loonheffingennummer bestaat en in gebruik is.
 
-ORGANISATIE EENHEID 0..999, O
+ORGANISATIE EENHEID 0..999, F
 
 *werkgever - ORGANISATIE EENHEID*
 
@@ -877,7 +774,7 @@ ORGANISATIE EENHEID 0..999, O
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
@@ -893,30 +790,30 @@ ORGANISATIE EENHEID 0..999, O
 
 05 Correctie
 
-**Ingangsdatum mutatie O an10**
+**Ingangsdatum mutatie F an10**
 
 *xml tag:* IngdatMut
 
 **<u>Naam / referentie</u>**
 
-**Naam organisatie-eenheid R an..70**
+**Naam organisatie-eenheid V an..70**
 
 *xml tag:* NmOrgeenh
 
-**Organisatie-eenheid, code R an..70**
+**Organisatie-eenheid, code V an..70**
 
 *xml tag:* OrgeenhCd
 
 Bilateraal afgesproken codering van de organisatie-eenheid.
 
-**Onderdeel van organisatieeenheid, code R an..70**
+**Onderdeel van organisatieeenheid, code V an..70**
 
 *xml tag:* OndOrgeenhCd
 
 Iedere organisatie-eenheid kan weer onderdeel zijn van een andere
 organisatie-eenheid.
 
-PERSONEELSSTERKTE 0..\*, O
+PERSONEELSSTERKTE 0..\*, F
 
 *werkgever - organisatie eenheid - PERSONEELSSTERKTE*
 
@@ -926,70 +823,70 @@ Gegevens met betrekking tot het aantal werknemers.
 
 **<u>Datum waarop de Personeelssterkte is vastgesteld</u>**
 
-**Peildatum personeelssterkte R an10**
+**Peildatum personeelssterkte V an10**
 
 *xml tag:* PeildatPersoneelssterkte
 
 De datum waarop de personeelssterkte - in termen van aantallen
 werknemers en FTE - is vastgesteld.
 
-**Vorige peildatum personeelssterkte O an10**
+**Vorige peildatum personeelssterkte F an10**
 
 *xml tag:* VorigePeildatPersoneelssterkte
 
 **<u>Gegevens over de personeelssterkte</u>**
 
-**Aantal werknemers R n..7**
+**Aantal werknemers V n..7**
 
 *xml tag:* AantWrknmrs
 
-**Aantal werknemers in dienst sinds vorige peildatum O n..7**
+**Aantal werknemers in dienst sinds vorige peildatum F n..7**
 
 *xml tag:* AantWrknmrsInDienstSindsVorigePeildat
 
-**Aantal werknemers uit dienst sinds vorige peildatum O n..7**
+**Aantal werknemers uit dienst sinds vorige peildatum F n..7**
 
 *xml tag:* AantWrknmrsUitDienstSindsVorigePeildat
 
-**Aantal nulurencontracten O n..7**
+**Aantal nulurencontracten F n..7**
 
 *xml tag:* AantalNulurencntrcten
 
-**Aantal FTE O n..7**
+**Aantal FTE F n..7**
 
 *xml tag:* AantFTE
 
-**Aantal vrouwelijke werknemers O n..5**
+**Aantal vrouwelijke werknemers F n..5**
 
 *xml tag:* AantVrouwelijkeWrknmrs
 
 Het aantal vrouwelijke werknemers dat werkt bij de werkgever.
 
-**Aantal vrouwelijke FTE O n..5**
+**Aantal vrouwelijke FTE F n..5**
 
 *xml tag:* AantVrouwelijkeFTE
 
 Het aantal vrouwelijke FTE dat werkt bij de werkgever.
 
-**Aantal mannelijke werknemers O n..5**
+**Aantal mannelijke werknemers F n..5**
 
 *xml tag:* AantMannelijkeWrknmrs
 
 Het aantal mannelijke werknemers dat werkt bij de werkgever.
 
-**Aantal mannelijke FTE O n..5**
+**Aantal mannelijke FTE F n..5**
 
 *xml tag:* AantMannelijkeFTE
 
 Het aantal mannelijke FTE dat werkt bij de werkgever.
 
-**Aantal uren FTE O n..3**
+**Aantal uren FTE F n..3**
 
 *xml tag:* AantUrenFTE
 
 Aantal uren dat 1 FTE wordt geacht te werken in een werkweek.
 
-ARBOCONTRACT 0..9, O
+ARBOCONTRACT 0..9, F
 
 *werkgever - ARBOCONTRACT*
 
@@ -999,7 +896,7 @@ Het contract dat de werkgever met de arbodienst heeft gesloten.
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
@@ -1017,21 +914,21 @@ Het contract dat de werkgever met de arbodienst heeft gesloten.
 
 **<u>Identificatie contract</u>**
 
-**Contractnummer R an..40**
+**Contractnummer V an..40**
 
 *xml tag:* Cntrnr
 
 **<u>Data</u>**
 
-**Ingangsdatum R an10**
+**Ingangsdatum V an10**
 
 *xml tag:* Ingdat
 
-**Ingangsdatum mutatie O an10**
+**Ingangsdatum mutatie F an10**
 
 *xml tag:* IngdatMut
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
@@ -1039,7 +936,7 @@ De datum van de laatste dag waarop de gegevens geldig zijn.
 
 **<u>Status</u>**
 
-**Status contract, code R an2**
+**Status contract, code V an2**
 
 *xml tag:* StatusCntrctCd
 
@@ -1049,13 +946,25 @@ De datum van de laatste dag waarop de gegevens geldig zijn.
 
 02 Beëindigd
 
-INTERMEDIAIR 0..1, O
+**Type arbocontract, code V an..2**
+
+*xml tag:* TypArbContCod
+
+*code list:* Type arbocontract (all selected)
+
+01 Combicontract
+
+02 Monocontract via verzekeraar
+
+03 Monocontract via arbodienst
+
+INTERMEDIAIR 0..1, F
 
 *werkgever - arbocontract - INTERMEDIAIR*
 
 *xml tag:* Intermediair
 
-**Handelsnaam organisatie R an..100**
+**Handelsnaam organisatie V an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -1064,65 +973,7 @@ deelneemt.
 
 Norminstantie: SUWI
 
-STRAATADRES NEDERLAND 0..\*, O
-
-*werkgever - arbocontract - intermediair - STRAATADRES NEDERLAND*
-
-*xml tag:* StrAdrNl
-
-Een adres in Nederland dat wordt bepaald aan de hand van straatnaam en
-huisnummer.
-
-**Postcode R an6**
-
-*xml tag:* Pc
-
-De officiële Nederlandse codering, bestaande uit een numerieke
-woonplaatscode een alfabetische lettercode.
-
-Norminstantie: NEN 5825 (Postcode)
-
-**Woonplaatsnaam R an..24**
-
-*xml tag:* Wnpl
-
-De door de gemeente vastgestelde naam van een woonplaats.
-
-Norm(instantie): NEN 5825 (Woonplaatsnaam)
-
-**Straatnaam\_ R an..80**
-
-*xml tag:* StraatLang
-
-De officiële door de gemeente vastgestelde naam van een straat.
-
-Als de officiële straatnaam echter langer is dan 24 posities dan mag
-
-deze ingekort volgens de specificaties van de BOCO-norm.
-
-Norm(instantie)
-
-NEN 5825 (Straatnaam)
-
-**Huisnummer R n..5**
-
-*xml tag:* Huisnr
-
-De numerieke aanduiding zoals deze door de gemeente aan het object is
-toegekend.
-
-Norminstantie: NEN 5825 (Huisnummer)
-
-**Huisnummertoevoeging O an..4**
-
-*xml tag:* HuisToev
-
-De alfanumerieke aanduiding achter huisnummer, zoals toegekend door de
-gemeente.
-
-Norminstantie: NEN 5825 (Huisnummertoevoeging)
-
-COMMUNICATIE 0..9, O
+COMMUNICATIE 0..9, F
 
 *werkgever - arbocontract - intermediair - COMMUNICATIE*
 
@@ -1131,7 +982,7 @@ COMMUNICATIE 0..9, O
 Communicatie is de verzameling van gegevens die het partijen mogelijk
 maakt met hulpmiddelen met elkaar te communiceren.
 
-**Soort communicatie, code R an2**
+**Soort communicatie, code V an2**
 
 *xml tag:* SrtComCd
 
@@ -1143,11 +994,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 10 Zakelijk mobiele telefoon
 
-**Nummer/adres communicatie R an..512**
+**Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
 
-DIENSTVERLENING 0..9, O
+DIENSTVERLENING 0..9, F
 
 *werkgever - arbocontract - DIENSTVERLENING*
 
@@ -1157,7 +1008,7 @@ Geeft aan welke dienstverlening wordt afgenomen.
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
@@ -1175,37 +1026,49 @@ Geeft aan welke dienstverlening wordt afgenomen.
 
 **<u>Identificerende gegevens</u>**
 
-**Identificatie dienstverlening R an..40**
+**Identificatie dienstverlening V an..40**
 
 *xml tag:* DnstvrlnngId
 
 **<u>Gegevens dienstverlening</u>**
 
-**Type arbopakket, code O an..70**
+**Type arbopakket, code F an..70**
 
 *xml tag:* TypeArbopakketCd
 
-**Type arbopakket, omschrijving O an..70**
+**Type arbopakket, omschrijving F an..70**
 
 *xml tag:* TypeArbopakketOms
 
+**Reden einde dienstverlening, code F an..2**
+
+*xml tag:* RdnEindDnstvrl
+
+*code list:* Reden einde dienstverlening (all selected)
+
+01 Overvoer
+
+02 Vervanging contract
+
+03 Dienstverlening komt te vervallen
+
 **<u>Data</u>**
 
-**Ingangsdatum R an10**
+**Ingangsdatum V an10**
 
 *xml tag:* Ingdat
 
-**Ingangsdatum mutatie O an10**
+**Ingangsdatum mutatie F an10**
 
 *xml tag:* IngdatMut
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
 De datum van de laatste dag waarop de gegevens geldig zijn.
 
-VERZEKERING/DEKKING 0..99, O
+VERZEKERING/DEKKING 0..99, F
 
 *werkgever - VERZEKERING/DEKKING*
 
@@ -1213,7 +1076,7 @@ VERZEKERING/DEKKING 0..99, O
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
@@ -1231,11 +1094,11 @@ VERZEKERING/DEKKING 0..99, O
 
 **<u>Identificatie contract</u>**
 
-**Contractnummer O an..40**
+**Contractnummer F an..40**
 
 *xml tag:* Cntrnr
 
-**Contractnummer pakket O an..40**
+**Contractnummer pakket F an..40**
 
 *xml tag:* CntrnrPakket
 
@@ -1244,21 +1107,21 @@ deel uitmaakt.
 
 **<u>Data</u>**
 
-**Ingangsdatum O an10**
+**Ingangsdatum F an10**
 
 *xml tag:* Ingdat
 
-**Ingangsdatum mutatie O an10**
+**Ingangsdatum mutatie F an10**
 
 *xml tag:* IngdatMut
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
 De datum van de laatste dag waarop de gegevens geldig zijn.
 
-**Contract periode O an..2**
+**Contract periode F an..2**
 
 *xml tag:* CntrctPerCd
 
@@ -1281,7 +1144,7 @@ verlengd wordt.
 
 **<u>Status</u>**
 
-**Status contract, code R an2**
+**Status contract, code V an2**
 
 *xml tag:* StatusCntrctCd
 
@@ -1291,7 +1154,7 @@ verlengd wordt.
 
 02 Beëindigd
 
-**Reden beëindiging contract, code O an2**
+**Reden beëindiging contract, code F an2**
 
 *xml tag:* RdnBeeindCntrct
 
@@ -1309,11 +1172,15 @@ verlengd wordt.
 
 06 Verkeerd opgemaakt contract
 
+07 Overvoer
+
+08 Vervanging contract
+
 99 Onbekend
 
 **<u>Soort verzekeringen</u>**
 
-**Soort verzekering, gecodeerd R an2**
+**Soort verzekering, gecodeerd V an2**
 
 *xml tag:* SrtVerzekeringCd
 
@@ -1341,7 +1208,7 @@ verlengd wordt.
 
 **<u>Wachttijd gegevens</u>**
 
-**Wachttijd in werkdagen O n..3**
+**Wachttijd in werkdagen F n..3**
 
 *xml tag:* WachttijdInDgn
 
@@ -1349,7 +1216,7 @@ Wachttijd eigen risico in werkdagen.
 
 **<u>Soort verzekering</u>**
 
-**Loonsoort O an..2**
+**Loonsoort F an..2**
 
 *xml tag:* LoonsrtCd
 
@@ -1363,21 +1230,21 @@ Wachttijd eigen risico in werkdagen.
 
 04 Uniform loon
 
-**Maximum verzekerd jaarloon O n..9,2**
+**Maximum verzekerd jaarloon F n..9,2**
 
 *xml tag:* MaxJrLoonVrzkrd
 
-**Dekkingspercentage jaar 1 O n..6,2**
+**Dekkingspercentage jaar 1 F n..6,2**
 
 *xml tag:* PrcDkkngJr1
 
-**Dekkingspercentage jaar 2 O n..6,2**
+**Dekkingspercentage jaar 2 F n..6,2**
 
 *xml tag:* PrcDkkngJr2
 
 **<u>Werkgeverslasten</u>**
 
-**Percentage werkgeverslasten O n..6,2**
+**Percentage werkgeverslasten F n..6,2**
 
 *xml tag:* PercWrkgvrslasten
 
@@ -1385,7 +1252,7 @@ Percentage meeverzekerde werkgeverslasten.
 
 **<u>Kenmerk</u>**
 
-**Productkenmerk O an..70**
+**Productkenmerk F an..70**
 
 *xml tag:* Productkenmerk
 
@@ -1393,155 +1260,93 @@ Maatschappijspecifiek kenmerk om verzekering/dekking te typeren.
 
 **<u>Inloop/uitloop</u>**
 
-**Inloop J/N R a1**
+**Inloop J/N V a1**
 
 *xml tag:* InloopJN
 
+Een indicatie dat inloop van toepassing is. Hierbij zijn de
+interventiekosten gedekt, ook als de ingangsdatum van verzuim van vóór
+het verzuimcontract is.
+
 *code list:* Logische eenheid (subset selected)
 
 J Ja
 
 N Nee
 
-**Uitloop J/N R a1**
+**Uitloop J/N V a1**
 
 *xml tag:* UitloopJN
 
+Indicatie dat uitloop van toepassing is. Hierbij zijn de
+interventiekosten gedekt, ook als verzuim doorloopt na beëindiging van
+het contract.
+
 *code list:* Logische eenheid (subset selected)
 
 J Ja
 
 N Nee
 
-AFSPRAKEN UITWISSELING VERZUIMDATA 0..9, O
+MACHTIGINGEN UITWISSELING VERZUIM 0..1, F
 
-*werkgever - verzekering/dekking - AFSPRAKEN UITWISSELING VERZUIMDATA*
+*werkgever - MACHTIGINGEN UITWISSELING VERZUIM*
 
-*xml tag:* AfsprakenUitwisselingVerzuimdata
+*xml tag:* MchtVrzm
+
+Machtigingsafspraken die nodig zijn bij het koppelen van monocontracten.
 
 **<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
 
-**Verwerking, code R an2**
+**Verwerking, code V an2**
 
 *xml tag:* VrwrkCd
 
-*code list:* Verwerkingscode (all selected)
+*code list:* Verwerkingscode (subset selected)
 
 01 Nieuw
 
 02 Gewijzigd
 
-03 Vervallen
-
 04 Ter identificatie en/ of ter informatie
-
-05 Correctie
 
 **<u>Data</u>**
 
-**Ingangsdatum R an10**
+**Ingangsdatum V an10**
 
 *xml tag:* Ingdat
 
-**Einddatum O an10**
+**Einddatum F an10**
 
 *xml tag:* Enddat
 
-**<u>Uitwisseling van verzuimgegevens</u>**
+**<u>Machtigingsgegevens</u>**
 
-**Uitwisseling verzuimmeldingen, code R an2**
+**Koppelcode V an..70**
 
-*xml tag:* UitwisselingVerzuimmeldingenCd
+*xml tag:* KpplCd
 
-*code list:* Uitwisseling verzuimmeldingen (all selected)
+Identificatie van de klant voor gegevensuitwisseling. Klant haalt deze
+code bij de ontvangende partij.
 
-01 Verzekeraar/Volmacht -\> Arbodienst
+**Reden einde machtiging, code F an2**
 
-02 Arbodienst --\> Verzekeraar/Volmacht
+*xml tag:* RdnEndMCd
 
-99 Niet van toepassing
+Code die de reden aangeeft voor het beëindigen van de machtiging voor
+het koppelen op basis van monocontracten.
 
-**Frequentie, code R an2**
+*code list:* Reden einde machtiging, code (all selected)
 
-*xml tag:* FrequentieCd
+01 Verzekering uitgebreid met arbodienstverlening
 
-*code list:* Frequentie (all selected)
+02 Beëindiging verzuimverzekering
 
-01 Dagbasis
+03 Beëindiging arbodienstverlening vanuit arbodienst
 
-02 Maandbasis
+04 Verzoek werkgever
 
-03 Kwartaalbasis
-
-04 Jaarbasis
-
-05 Continu
-
-AFSPRAKEN UITWISSELING VERZUIMDATA 0..9, O
-
-*werkgever - AFSPRAKEN UITWISSELING VERZUIMDATA*
-
-*xml tag:* AfsprakenUitwisselingVerzuimdata
-
-**<u>Wijze waarop de gegevens verwerkt moeten worden</u>**
-
-**Verwerking, code R an2**
-
-*xml tag:* VrwrkCd
-
-*code list:* Verwerkingscode (all selected)
-
-01 Nieuw
-
-02 Gewijzigd
-
-03 Vervallen
-
-04 Ter identificatie en/ of ter informatie
-
-05 Correctie
-
-**<u>Data</u>**
-
-**Ingangsdatum R an10**
-
-*xml tag:* Ingdat
-
-**Einddatum O an10**
-
-*xml tag:* Enddat
-
-**<u>Uitwisseling van verzuimgegevens</u>**
-
-**Uitwisseling verzuimmeldingen, code R an2**
-
-*xml tag:* UitwisselingVerzuimmeldingenCd
-
-*code list:* Uitwisseling verzuimmeldingen (all selected)
-
-01 Verzekeraar/Volmacht -\> Arbodienst
-
-02 Arbodienst --\> Verzekeraar/Volmacht
-
-99 Niet van toepassing
-
-**Frequentie, code R an2**
-
-*xml tag:* FrequentieCd
-
-*code list:* Frequentie (all selected)
-
-01 Dagbasis
-
-02 Maandbasis
-
-03 Kwartaalbasis
-
-04 Jaarbasis
-
-05 Continu
-
-COMMUNICATIE 0..9, O
+COMMUNICATIE 0..9, F
 
 *werkgever - COMMUNICATIE*
 
@@ -1552,7 +1357,7 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 **<u>Soort communicatie</u>**
 
-**Soort communicatie, code R an2**
+**Soort communicatie, code V an2**
 
 *xml tag:* SrtComCd
 
@@ -1566,11 +1371,11 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 **<u>Nummer</u>**
 
-**Nummer/adres communicatie R an..512**
+**Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom
 
-CONTACTPERSOON 0..\*, O
+CONTACTPERSOON 0..\*, F
 
 *werkgever - CONTACTPERSOON*
 
@@ -1578,7 +1383,7 @@ CONTACTPERSOON 0..\*, O
 
 **<u>Identificerende gegevens</u>**
 
-**Personeelsnummer O an..35**
+**Personeelsnummer F an..35**
 
 *xml tag:* Persnr
 
@@ -1587,7 +1392,7 @@ inhoudingsplichtige bekend is.
 
 **<u>Naamgegevens</u>**
 
-**Achternaam/Achternamen R an..200**
+**Achternaam/Achternamen V an..200**
 
 *xml tag:* Achternaam
 
@@ -1613,7 +1418,7 @@ van de volgende namen:
 
 Bron: Genootschap Onze Taal
 
-**Voorletters R a..6**
+**Voorletters V a..6**
 
 *xml tag:* Voorl
 
@@ -1625,7 +1430,7 @@ Alleen alfabetische tekens zijn toegestaan.
 
 Bron: Loonaangifte.
 
-**Roepnaam O a..35**
+**Roepnaam F a..35**
 
 *xml tag:* Roepnaam
 
@@ -1633,7 +1438,7 @@ Voornaam waarmee iemand wordt aangesproken.
 
 **<u>Overige gegevens</u>**
 
-**Geslachtsaanduiding, code R an1**
+**Geslachtsaanduiding, code V an1**
 
 *xml tag:* GslchtCd
 
@@ -1650,7 +1455,7 @@ O Onbekend/niet gespecificeerd
 
 V Vrouw
 
-**Rol contactpersoon, code O an2**
+**Rol contactpersoon, code F an2**
 
 *xml tag:* RolCntprsnCd
 
@@ -1662,7 +1467,7 @@ V Vrouw
 
 05 Algemeen contactpersoon
 
-COMMUNICATIE 0..\*, O
+COMMUNICATIE 0..\*, F
 
 *werkgever - contactpersoon - COMMUNICATIE*
 
@@ -1673,7 +1478,7 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 **<u>Soort communicatie</u>**
 
-**Soort communicatie, code R an2**
+**Soort communicatie, code V an2**
 
 *xml tag:* SrtComCd
 
@@ -1687,6 +1492,6 @@ maakt met hulpmiddelen met elkaar te communiceren.
 
 **<u>Nummer</u>**
 
-**Nummer/adres communicatie R an..512**
+**Nummer/adres communicatie V an..512**
 
 *xml tag:* NrCom

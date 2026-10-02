@@ -4,7 +4,7 @@ Business chain: *Verzuim Datamodel*
 
 Transaction type: *Basis Arbodienst Verzekeraar*
 
-Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2022***
+Functional message: ***Rapportage Arbodienst -\> Verzekeraar 2024***
 
 Actor group: *Arbodiensten Verzekeraars*
 
@@ -12,21 +12,21 @@ XML Tag Set: *Standard XML*
 
 **Copyright SIVI**
 
-1 juli 2022
+3 juli 2024
 
 Summary
 
-Bericht algemeen 1..1, R
+Bericht algemeen 1..1, V
 
-Verzekeraar/Volmacht 0..1, O
+Verzekeraar/Volmacht 0..1, F
 
-Arbodienst 0..1, O
+Arbodienst 0..1, F
 
-Verslagperiode 1..999, R
+Verslagperiode 1..999, V
 
-1 Rapportage 1..1, R
+1 Rapportage 1..1, V
 
-BERICHT ALGEMEEN 1..1, R
+BERICHT ALGEMEEN 1..1, V
 
 *BERICHT ALGEMEEN*
 
@@ -34,7 +34,7 @@ BERICHT ALGEMEEN 1..1, R
 
 **<u>Soort bericht + versienummer</u>**
 
-**Bericht, code R an..5**
+**Bericht, code V an..5**
 
 *xml tag:* BrCd
 
@@ -42,7 +42,7 @@ BERICHT ALGEMEEN 1..1, R
 
 00703 Managementrapportage
 
-**Versienummer bericht, code R an..5**
+**Versienummer bericht, code V an..5**
 
 *xml tag:* VnrBrCd
 
@@ -52,23 +52,23 @@ BERICHT ALGEMEEN 1..1, R
 
 **<u>Aanmaakdatum</u>**
 
-**Aanmaakdatum bericht R an10**
+**Aanmaakdatum bericht V an10**
 
 *xml tag:* AandatBr
 
-**Aanmaaktijd bericht R an8**
+**Aanmaaktijd bericht V an8**
 
 *xml tag:* AantijdBr
 
 **<u>Inzender</u>**
 
-**Identificatie inzender R an..40**
+**Identificatie inzender V an..40**
 
 *xml tag:* IdInzndr
 
 Bilateraal afgesproken codering betreffende de inzender van het bericht.
 
-**Gebruikt softwarepakket R an..35**
+**Gebruikt softwarepakket V an..35**
 
 *xml tag:* GebrSwPakket
 
@@ -77,7 +77,7 @@ voor de vervaardiging van het bericht.
 
 **<u>Ontvanger</u>**
 
-**Identificatie ontvanger R an..40**
+**Identificatie ontvanger V an..40**
 
 *xml tag:* IdOntvngr
 
@@ -86,13 +86,13 @@ Bilateraal afgesproken codering betreffende de ontvanger
 
 **<u>Berichtreferentie</u>**
 
-**Berichtreferentienummer R an..512**
+**Berichtreferentienummer V an..512**
 
 *xml tag:* Berrefnr
 
 **<u>Testindicatie</u>**
 
-**Test J/N R a1**
+**Test J/N V a1**
 
 *xml tag:* TestJN
 
@@ -108,7 +108,7 @@ O Onbekend
 
 **<u>Ontvangstbevestiging</u>**
 
-**Ontvangstbevestiging gewenst J/N R a1**
+**Ontvangstbevestiging gewenst J/N V a1**
 
 *xml tag:* OntvngstbevJN
 
@@ -122,7 +122,7 @@ N Nee
 
 O Onbekend
 
-VERZEKERAAR/VOLMACHT 0..1, O
+VERZEKERAAR/VOLMACHT 0..1, F
 
 *VERZEKERAAR/VOLMACHT*
 
@@ -130,7 +130,7 @@ VERZEKERAAR/VOLMACHT 0..1, O
 
 **<u>Handelsnaam</u>**
 
-**Handelsnaam organisatie R an..100**
+**Handelsnaam organisatie V an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -141,7 +141,7 @@ Norminstantie: SUWI
 
 **<u>Identificerende gegevens</u>**
 
-**Identificatie verzekeraar/volmacht, code R an..4**
+**Identificatie verzekeraar/volmacht, code V an..4**
 
 *xml tag:* IdVrzkrVolmachtCd
 
@@ -153,7 +153,7 @@ verzekeraars/volmachten. Zie www.sivi.org.
 
 *The codes of this codelist are documented in a separate document*
 
-ARBODIENST 0..1, O
+ARBODIENST 0..1, F
 
 *ARBODIENST*
 
@@ -161,7 +161,7 @@ ARBODIENST 0..1, O
 
 **<u>Handelsnaam</u>**
 
-**Handelsnaam organisatie R an..100**
+**Handelsnaam organisatie V an..100**
 
 *xml tag:* HndlsnmOrg
 
@@ -172,7 +172,7 @@ Norminstantie: SUWI
 
 **<u>Arbo-dienst</u>**
 
-**Arbodienst, code O an3**
+**Arbodienst, code F an3**
 
 *xml tag:* ArbdnstCd
 
@@ -183,23 +183,23 @@ de website van SIVI. Zie www.sivi.org.
 
 *The codes of this codelist are documented in a separate document*
 
-VERSLAGPERIODE 1..999, R
+VERSLAGPERIODE 1..999, V
 
 *VERSLAGPERIODE*
 
 *xml tag:* Verslagperiode
 
-**Ingangsdatum R an10**
+**Ingangsdatum V an10**
 
 *xml tag:* Ingdat
 
-**Einddatum R an10**
+**Einddatum V an10**
 
 *xml tag:* Enddat
 
 De datum van de laatste dag waarop de gegevens geldig zijn.
 
-RAPPORTAGE 1..1, R
+RAPPORTAGE 1..1, V
 
 *verslagperiode - RAPPORTAGE*
 
@@ -207,210 +207,210 @@ RAPPORTAGE 1..1, R
 
 **<u>Algemeen</u>**
 
-**Aantal klanten R n..7**
+**Aantal klanten V n..7**
 
 *xml tag:* AantalKlanten
 
-**Aantal werknemers O n..7**
+**Aantal werknemers F n..7**
 
 *xml tag:* AantalMeldingen
 
 **<u>Aantal meldingen</u>**
 
-**Aantal verzuimmeldingen O n..7**
+**Aantal verzuimmeldingen F n..7**
 
 *xml tag:* AantalVerzuimmeldingen
 
-**Aantal verzuimdagen O n..7**
+**Aantal verzuimdagen F n..7**
 
 *xml tag:* AantalVerzuimdagen
 
-**Verzuimpercentage O n..6,2**
+**Verzuimpercentage F n..6,2**
 
 *xml tag:* Verzuimpercentage
 
-**Verzuimfrequentie O n..7**
+**Verzuimfrequentie F n..7**
 
 *xml tag:* Verzuimfrequentie
 
-**Aantal deelherstelmeldingen O n..7**
+**Aantal deelherstelmeldingen F n..7**
 
 *xml tag:* AantalDeelherstelmeldingen
 
-**Percentage deelherstelmeldingen O n..6,2**
+**Percentage deelherstelmeldingen F n..6,2**
 
 *xml tag:* PercentageDeelherstelmeldingen
 
-**Aantal herstelmeldingen O n..7**
+**Aantal herstelmeldingen F n..7**
 
 *xml tag:* AantalHerstelmeldingen
 
-**Percentage herstelmeldingen O n..6,2**
+**Percentage herstelmeldingen F n..6,2**
 
 *xml tag:* PercentageHerstelmeldingen
 
-**Aantal meldingen regres O n..7**
+**Aantal meldingen regres F n..7**
 
 *xml tag:* AantalMeldingenRegres
 
 **<u>Verzuimduur</u>**
 
-**Gemiddelde verzuimduur (gesloten dossiers) O n..7**
+**Gemiddelde verzuimduur (gesloten dossiers) F n..7**
 
 *xml tag:* GemiddeldeVerzuimduur
 
-**Ziekteverzuimpercentage 1-7 dgn O n..6,2**
+**Ziekteverzuimpercentage 1-7 dgn F n..6,2**
 
 *xml tag:* ZiekteverzuimpercentageKort
 
-**Ziekteverzuimpercentage 8-42 dgn O n..6,2**
+**Ziekteverzuimpercentage 8-42 dgn F n..6,2**
 
 *xml tag:* ZiekteverzuimpercentageMiddellang
 
-**Ziekteverzuimpercentage 43-365 dgn O n..6,2**
+**Ziekteverzuimpercentage 43-365 dgn F n..6,2**
 
 *xml tag:* ZiekteverzuimpercentageLang
 
-**Ziekteverzuimpercentage \>365 dgn O n..6,2**
+**Ziekteverzuimpercentage \>365 dgn F n..6,2**
 
 *xml tag:* ZiekteverzuimpercentageExtraLang
 
-**Aantal meldingen verzuim 1-7 werkdagen O n..7**
+**Aantal meldingen verzuim 1-7 werkdagen F n..7**
 
 *xml tag:* AantalMeldingenVerzuimKort
 
-**Aantal meldingen verzuim 8-42 werkdagen O n..7**
+**Aantal meldingen verzuim 8-42 werkdagen F n..7**
 
 *xml tag:* AantalMeldingenVerzuimMiddellang
 
-**Aantal meldingen verzuim 43-365 werkdagen O n..7**
+**Aantal meldingen verzuim 43-365 werkdagen F n..7**
 
 *xml tag:* AantalMeldingenVerzuimLang
 
-**Aantal meldingen verzuim \> 365 dagen O n..7**
+**Aantal meldingen verzuim \> 365 dagen F n..7**
 
 *xml tag:* AantalMeldingenVerzuimExtraLang
 
-**Aantal ziekdagen 1-7 werkdagen O n..7**
+**Aantal ziekdagen 1-7 werkdagen F n..7**
 
 *xml tag:* AantalZiekdagenKort
 
-**Aantal ziekdagen 8-42 werkdagen O n..7**
+**Aantal ziekdagen 8-42 werkdagen F n..7**
 
 *xml tag:* AantalZiekdagenMiddellang
 
-**Aantal ziekdagen 43-365 werkdagen O n..7**
+**Aantal ziekdagen 43-365 werkdagen F n..7**
 
 *xml tag:* AantalZiekdagenLang
 
-**Aantal ziekdagen \> 365 werkdagen O n..7**
+**Aantal ziekdagen \> 365 werkdagen F n..7**
 
 *xml tag:* AantalZiekdagenExtraLang
 
 **<u>Proces poortwachterproof</u>**
 
-**Aantal probleemanalyses opgesteld O n..7**
+**Aantal probleemanalyses opgesteld F n..7**
 
 *xml tag:* AantalProbleemanalysesOpgesteld
 
-**Percentage probleemanalyses op tijd O n..6,2**
+**Percentage probleemanalyses op tijd F n..6,2**
 
 *xml tag:* PercentageProbleemanalysesOpTijd
 
-**Aantal plannen van aanpak opgesteld O n..7**
+**Aantal plannen van aanpak opgesteld F n..7**
 
 *xml tag:* AantalPlannenVanAanpakOpgesteld
 
-**Percentage plannen van aanpak op tijd O n..6,2**
+**Percentage plannen van aanpak op tijd F n..6,2**
 
 *xml tag:* PercentagePlannenVanAanpakOpTijd
 
-**Aantal 42 weeksmeldingen gedaan O n..7**
+**Aantal 42 weeksmeldingen gedaan F n..7**
 
 *xml tag:* AantalTweeenveertigWeeksmeldingenGedaan
 
-**Percentage 42 weeksmeldingen op tijd O n..6,2**
+**Percentage 42 weeksmeldingen op tijd F n..6,2**
 
 *xml tag:* PercentageTweeenveertigWeeksmeldingenOpTijd
 
-**Aantal eindejaarsevaluaties gedaan O n..7**
+**Aantal eindejaarsevaluaties gedaan F n..7**
 
 *xml tag:* AantalEindejaarsevaluatiesGedaan
 
-**Percentage eindejaarsevaluaties op tijd O n..6,2**
+**Percentage eindejaarsevaluaties op tijd F n..6,2**
 
 *xml tag:* PercentageEindejaarsevaluatiesOpTijd
 
-**Aantal re-integratieverslagen opgesteld O n..7**
+**Aantal re-integratieverslagen opgesteld F n..7**
 
 *xml tag:* AantalReintegratieverslagenOpgesteld
 
-**Percentage re-integratieverslagen op tijd O n..7**
+**Percentage re-integratieverslagen op tijd F n..7**
 
 *xml tag:* PercentageReintegratieverslagenOpTijd
 
-**Aantal poortwachtersancties O n..7**
+**Aantal poortwachtersancties F n..7**
 
 *xml tag:* AantalPoortwachtersancties
 
 **<u>Interventies</u>**
 
-**Aantal geadviseerde interventies O n..7**
+**Aantal geadviseerde interventies F n..7**
 
 *xml tag:* AantalGeadviseerdeInterventies
 
-**Aantal geaccordeerde interventies O n..7**
+**Aantal geaccordeerde interventies F n..7**
 
 *xml tag:* AantalGeaccordeerdeInterventies
 
-**Aantal interventies met bijdrage Verzekeraar O n..7**
+**Aantal interventies met bijdrage Verzekeraar F n..7**
 
 *xml tag:* AantalInterventiesMetBijdrageVerzekeraar
 
-**Kosten interventies voor Verzekeraar O n..9,2**
+**Kosten interventies voor Verzekeraar F n..9,2**
 
 *xml tag:* KostenInterventiesVootVerzekeraar
 
 **<u>Soorten geaccordeerde interventies</u>**
 
-**Aantal tweede spoor O n..7**
+**Aantal tweede spoor F n..7**
 
 *xml tag:* AantalTweedeSpoor
 
-**Aantal psychische interventies O n..7**
+**Aantal psychische interventies F n..7**
 
 *xml tag:* AantalPsychischeInterventies
 
-**Aantal fysieke interventies O n..7**
+**Aantal fysieke interventies F n..7**
 
 *xml tag:* AantalFysiekeInterventies
 
-**Aantal multidisciplinaire interventies O n..7**
+**Aantal multidisciplinaire interventies F n..7**
 
 *xml tag:* AantalMultidisciplinaireInterventies
 
-**Aantal wachtlijstbemiddelingen O n..7**
+**Aantal wachtlijstbemiddelingen F n..7**
 
 *xml tag:* AantalWachtlijstbemiddelingen
 
-**Aantal overige internventies O n..7**
+**Aantal overige internventies F n..7**
 
 *xml tag:* AantalOverigeInterventies
 
 **<u>Klanttevredenheid</u>**
 
-**Werkgevertevredenheid van 0 - 10 O n..3**
+**Werkgevertevredenheid van 0 - 10 F n..3**
 
 *xml tag:* Werkgevertevredenheid
 
-**Aantal gemelde klachten O n..7**
+**Aantal gemelde klachten F n..7**
 
 *xml tag:* AantalGemeldeKlachten
 
-**Aantal terechte klachten O n..7**
+**Aantal terechte klachten F n..7**
 
 *xml tag:* AantalTerechteKlachten
 
-**Percentage terechte klachten O n..6,2**
+**Percentage terechte klachten F n..6,2**
 
 *xml tag:* PercentageTerechteKlachten
